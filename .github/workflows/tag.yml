@@ -1,0 +1,17 @@
+name: Tags de version
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher le tag
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: echo "Tag de version $TAG_NAME"
