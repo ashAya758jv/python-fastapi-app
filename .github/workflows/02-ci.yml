@@ -38,6 +38,7 @@ jobs:
         run: python -c "from app.main import app; print(app.title)"
   test:
     name: Test – Pytest
+    needs: [lint, build]
     runs-on: ubuntu-latest
     steps:
       - name: Récupérer le code
