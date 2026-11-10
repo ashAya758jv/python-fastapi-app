@@ -59,3 +59,6 @@ MIT. See [LICENSE](./LICENSE).
 
 Travail réalisé sur la branche feature/tp-ci. Ce commit modifie uniquement la documentation pour vérifier le filtre de chemins.
 
+Les réponses Q0–Q10, les observations et les liens des exécutions sont dans le
+[compte rendu du TP5](COMPTE_RENDU_TP5.md).
+
