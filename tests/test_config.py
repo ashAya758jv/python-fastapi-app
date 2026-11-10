@@ -4,9 +4,11 @@ from unittest.mock import patch
 from app.config import Settings, settings
 
 
-def test_settings_default_values():
+def test_settings_default_values(monkeypatch):
     """Test that Settings class has correct default values."""
-    test_settings = Settings()
+    for name in ("APP_NAME", "APP_ENV", "DEBUG", "HOST", "PORT", "LOG_LEVEL"):
+        monkeypatch.delenv(name, raising=False)
+    test_settings = Settings(_env_file=None)
     assert test_settings.APP_NAME == "FastAPI Starter"
     assert test_settings.APP_ENV == "development"
     assert test_settings.DEBUG is False
