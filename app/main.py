@@ -1,3 +1,5 @@
+"""Application FastAPI utilisée pour les expériences CI du TP5."""
+
 from fastapi import FastAPI
 
 from .config import settings
